@@ -1,0 +1,299 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+#navbar{
+    display: flex;
+    justify-content: space-evenly;
+    height:60px;
+    align-items: center;
+}
+.img{
+    width: 10%;
+}
+.img img{
+    width:80% ;
+}
+.input img{
+    width:5%;
+}
+.input{
+    display: flex;
+    height: 30px;
+   width: 50%;
+    border: 1px solid #2d377b;
+    border-radius: 5px;
+    gap: 5px;
+    }
+.input input{
+border:transparent;
+width:90%;
+
+margin-top:5px;
+outline: none;
+ }
+ .button{
+    width: 15%;
+    display: flex;
+    height: 30px;
+}
+ .signup{
+    height: 30px;
+    width: 120px;
+    background-color: transparent;
+    color: #2d377b;
+    border: none;
+ }
+ .signin{
+    height: 30px;
+    width: 120px;
+    background-color: #2d377b;
+     color: white;
+    border: none;
+    border-radius: 5px;
+ }
+.list{
+    width: 80%;
+    
+    margin: auto;
+    margin-top: 20px;
+}
+.courses{
+    list-style: none;
+    display: flex;
+    margin-left: 40px;
+    gap:70px;
+    color: #2d377b;
+    
+}
+#skills{
+     height: 600px;
+ margin-top:40px;
+  
+}
+.skillimg img{
+    width:100%;
+    height: 600px;
+}
+#hardwork{
+margin: auto;
+margin-top: 60px;
+}
+.pure{
+width:60%;
+margin: auto;
+margin-top: 20px;
+color: #2d377b;
+text-align: center;
+font-size: 25px;
+}
+.pure hr{
+    width:20% ;
+    border: 2px solid #f9de9e;
+    margin: auto;
+}
+.success{
+    width: 80%;
+    margin: auto;
+    display: flex;
+    gap:40px;
+    margin-top:60px;
+}
+.student{
+    width:40%;
+    text-align: center;
+    line-height: 40px;
+    font-size: 20px;
+}
+#achivers{
+    background-color: #eef0f5;
+    margin-top: 40px;
+}
+.active{
+    width:70%;
+     margin: auto;
+
+}
+.work{
+    width: 50%;
+    padding-top:40px;
+    text-align: center;
+    font-size:40px;
+    margin: auto;
+    margin-top: 40px;
+    color: #2d377b;
+}
+.achiverscomp{
+    width: 70%;
+    display: flex;
+    gap: 40px;
+    margin: auto;
+    margin-top: 60px;
+}
+.landingpage{
+    
+    height:100px;
+    border-bottom: 80px;
+}
+.landingpage img{
+    width: 100%;
+}
+
+.namelist{
+    width: 80%;
+    display: flex;
+    
+    margin: auto;
+    margin-top: 60px;
+    gap: 30px;
+    margin-bottom:80px;
+}
+.person{
+     width: 50%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    margin-bottom: 30px;
+}
+.person img{
+    width:200px;
+    height: 200px;
+    border-radius: 100px;
+}
+.person h3{
+    font-size: 20px;
+    color: #2d377b;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+.person h6{
+    color:#757575 ;
+    font-size: 10px;
+    margin-bottom: 20px;
+}
+.text{
+    color: #616161;
+}
+.live{
+    width: 70%;
+
+    margin: auto;
+
+}
+.program{
+    
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    margin-top: 40px;
+}
+.program h1{
+ color: #2d377b;
+ margin-bottom: 20px;
+
+}
+.listprogram img{
+    width:100%;
+    
+}
+.liveprogram{
+    
+    display: flex;
+    gap: 40px;
+    margin-top: 60px;
+    
+}
+.listprogram{
+    
+    width: 50%;
+    padding: 20px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border-radius: 10px;
+}
+.listprogram h5{
+    color: #2d377b;
+    font-size: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.price{
+    display: flex;
+    justify-content:space-between ;
+    margin-top: 20px;
+    
+}
+.price button{
+    background-color: #7d9ecc;
+    border-radius: 5px;
+    width: 50px;
+    height: 30px;
+    border: none;
+}
+.view button{
+    width: 100px;
+    height: 40px;
+ background-color: transparent;
+    color: #2d377b;
+    border: none;
+    margin: auto;
+    display: block;
+    margin-top: 60px;
+    margin-bottom: 60px;
+    
+}
+.data{
+    color: #adaeae;
+    margin-bottom:20px ;
+}
+.hackathon{
+    width: 80%;
+    margin: auto;
+    text-align: center;
+    margin-top: 80px;
+    margin-bottom: 30px;
+}
+.conduct{
+    color: #2d377b;
+    margin-bottom: 30px;
+    font-size: 25px;
+}
+.lefttwo{
+    display: flex;
+    width:60%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 60px;
+    
+    gap: 20px;
+}
+.became{
+    color: #2d377b;
+
+}
+.studentour{
+    line-height: 20px;
+    font-size: 15px;
+    width: 70%;
+    margin: auto;
+    margin-top: 20px;
+}
+.partners{
+    width: 70%;
+    margin: auto;
+}
+.achiverscomp1{
+    width: 70%;
+    display: flex;
+    gap: 40px;
+    margin: auto;
+    margin-top: 60px;
+
+}
+.achiverscomp1 img{
+    width: 100%;
+}
+.landingpage1{
+    width: 50%;
+    margin-bottom: 90px;
+}
