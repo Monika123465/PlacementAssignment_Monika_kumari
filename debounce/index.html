@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+       #query {
+            width: 500px;
+            height: 30px;
+            margin-top: 20px;
+            margin-bottom:5px;
+            border-radius:10px;
+            outline: none;
+        }
+
+        #movies {
+            width: 505px;
+            height: 500px;
+            overflow-x:scroll ;
+            overflow-y: scroll;
+
+        }
+        </style>
+</head>
+<body>
+    <input oninput="debounce(main,1000)" type="text" id="query" placeholder="enter movie name">
+    <div id="movies"></div>
+    <div class="details"></div>
+</body>
+</html>
+<script>
+
+async function  main(){
+        let query=document.getElementById("query").value
+        console.log(query)
+        let data=await getData(query)
+        append(data)
+    }
+    async function getData(query){
+      const url=`http://www.omdbapi.com/?apikey=d4192291&s=${query}`
+      let res=await fetch(url)
+      let data=await res.json()
+      return data.Search
+    }
+    function append(data){
+        if(!data){
+            return
+        }
+        let container=document.getElementById("movies")
+        container.innerHTML=null
+
+        data.forEach(function(el){
+            let img=document.createElement("img")
+            img.src=el.Poster
+            console.log(el)
+            let p=document.createElement("p")
+            p.innerText=el.Title
+            p.style.cursor="pointer"
+            p.addEventListener("click",function(){
+                rendersinglemovie(el.imdbID)
+            })
+            let div=document.createElement("div")
+            div.setAttribute("class","movie")
+            div.append(img,p)
+            container.append(div)
+        })
+    }
+    let id;
+    function debounce(func,delay){
+        if(id){
+            clearTimeout(id)
+        }
+        id=setTimeout(function(){
+            func()
+        } ,delay)
+    }
+</script>
+
+
