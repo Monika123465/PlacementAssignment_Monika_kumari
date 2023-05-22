@@ -54,8 +54,8 @@
     margin-left: 30px;
     border-radius: 10px;
     outline: none;
-    
     box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    border: 1px solid cadetblue;
 }
 #button{
     width:130px;
