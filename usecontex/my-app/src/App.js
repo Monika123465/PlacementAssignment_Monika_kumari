@@ -11,7 +11,7 @@ function App() {
       {/* Top Hero Image */}
       <div className="hero-image">
         <div className={darkMode ? "overlay-dark" : "overlay"}>
-          <h2>about . developer</h2>
+          <h2>Web Developer</h2>
         </div>
       </div>
       {/* About Details */}
