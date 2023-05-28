@@ -4,6 +4,7 @@ const cryptoJS=require('crypto-js')
 const jwt=require("jsonwebtoken")
 
 const authRouter=express.Router()
+// dekhi  kya define ki hai authRouter aur exports ki router
 
 //Register
 authRouter.post('/register',async(req,res)=>{
@@ -35,10 +36,24 @@ authRouter.post('/login',async(req,res)=>{
         user.password,
         process.env.PASS_SEC
     )
-    const OriginalPassword=hashedPassword.toString(CryptoJs)
+    const OriginalPassword=hashedPassword.toString(CryptoJS.enc.Utf8)
+    OriginalPassword!=req.body.password &&
+    res.status(401).json("wrong credentials!")
+    const accessToken=jwt.sign(
+        {
+            id:user._id,
+            isAdmin:user.isAdmin
+        },
+        process.env.JWT_SEC,
+        {expiresIn:"3d"}
+    )
+    const {password,...others}=user._doc
+    res.status(200).json({...others,accessToken})
     
   } catch (error) {
     
+    res.status(200).json(err)
   }
     
 })
+module.exports=authRouter

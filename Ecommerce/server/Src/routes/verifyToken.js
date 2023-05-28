@@ -1,7 +1,9 @@
 const jwt=require('jsonwebtoken')
 
+
+
 const verifyToken=(req,res,next)=>{
-    const authHeader=req.headerss.verifyToken
+    const authHeader=req.headers.verifyToken
     if(authHeader){
         const token=authHeader.split("")[1]
         jwt.verify(token,process.env.JWT_SEC,(err,user)=>{
@@ -34,7 +36,7 @@ const verifyTokenAndAdmin=(req,res,next)=>{
     })
 }
 
-module.exports={
+module.exports ={
     verifyToken,
     verifyTokenAndAdmin,
     verifyTokenAndAuthorization
