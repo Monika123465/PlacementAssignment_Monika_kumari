@@ -8,18 +8,20 @@ import Cart from "./pages/Cart";
 import {
   BrowserRouter as Router,
   Route,
+  Routes
   
 } from "react-router-dom";
 import { redirect } from "react-router-dom";
 import Success from "./pages/Success";
 import { useSelector } from "react-redux";
 
-// ab is tarike se mat karo ab is tarah se karo 
+
 
 const App = () => {
   const user = useSelector((state) => state.user.currentUser);
   return (
     <Router>
+      <Routes>
         <Route exact path="/" element={<Home/>} >
         
         </Route>
@@ -32,10 +34,9 @@ const App = () => {
         <Route path="/success" element={ <Success />}>
          
         </Route>
-        <Route path="/login">{user ? <redirect to="/" /> : <Login />}</Route>
-        <Route path="/register">
-          {user ? <redirect to="/" />: <Register />}
-        </Route>
+        <Route path="/login"    element={<redirect to="/Login" /> }></Route>
+        <Route path="/register"  element={<redirect to="/Register" /> }></Route>
+        </Routes>
     </Router>
   );
 };
